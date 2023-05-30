@@ -3,7 +3,7 @@
     <div>
       <h1> E-Wallet</h1>
       <h5>Active card</h5>
-      <Card class="activeCard" v-if="isActive" v-bind:card="isActive"/>
+      <CardCard class="activeCard" v-if="isActive" v-bind:card="isActive"/>
     </div>
     <div class="cardGet">
       <CardCard v-for="card in cards" :key ="card.id" v-bind:card="card" @activeCard="activeCard" />

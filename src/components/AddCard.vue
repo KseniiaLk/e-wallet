@@ -131,15 +131,7 @@
               this.$emit('sendCard', {...this.cardInfo})
                 this.$emit('viewChange');
             }
-          },  
-          validate() {
-            if (this.cardInfo.cardNum.length != 16) {
-          this.errors.push('must contain 16 digits')
-            }
-            if (this.cardInfo.name.length == 0) {
-              this.errors.push('name required')
-            } 
-          } 
+          }
       }
   }
   </script>
