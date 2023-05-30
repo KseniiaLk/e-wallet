@@ -1,16 +1,16 @@
 <template>
   <main class="app">
   <Wallet v-bind:cards="cards" v-if="currentView == 'wallet'" @viewChange="changeView" />
-  <NewCard v-else @viewChange="newCardInfo" @sendCard="newCard"/>
+  <AddCard v-else @viewChange="changeView" @sendCard="newCard"/>
 </main>
 </template>
 
 <script>
 import Wallet from './components/Wallet.vue'
-import NewCard from './components/NewCard.vue'
+import AddCard from './components/AddCard.vue'
 
 export default {
-components: {Wallet, NewCard},
+components: {Wallet, AddCard},
 data() { return {
 cards: [
   {
@@ -61,17 +61,17 @@ currentView: 'wallet',
 }
 },
 methods: {
-  newCardInfo(newInfo) {
+  newCard(newInfo) {
   this.cards.push(newInfo) 
+  }, 
 }, 
 changeView() {
   if (this.currentView == 'wallet') {
-    this.currentView = 'newCard';
+    this.currentView = 'addCard';
   } else {
     this.currentView = 'wallet';
   }
 },
-}
 }
 </script>
 

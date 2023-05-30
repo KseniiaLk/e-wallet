@@ -13,14 +13,14 @@
     </template>
     
     <script>
-    import Card from './Card.vue'
+    import CardCard from './CardCard.vue'
     
     export default {
         data(){ return {
             isActive: null
         }
         },
-        components: {Card},
+        components: {CardCard},
         props: ['cards'],
         methods: {
             changeView() {
@@ -38,20 +38,19 @@
     <style scoped>
     .activeCard{
     margin-bottom: 3rem;
-    margin-top: 0rem;
+    margin-top: 1rem;
     }
     .cardGet{
     display: grid;
     grid-auto-rows: 2rem;
     height: 80px;
-    background-color: rgb(241, 233, 232);
-    font-family: 'PT Mono'
+    background-color: rgb(202, 195, 194);
     }
     
     .bottom {
     position: relative;
     width: 382px;
-    height: 80px;
-    top: 15rem;
+    height: 90px;
+    top: 18rem;
     }
     </style>

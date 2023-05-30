@@ -4,11 +4,11 @@
       <img :src="card.vendor.cardWifi">
       <img :src="card.vendor.cardLogo">
       </div>
-       <img class="cardChip" :src="card.vendor.cardChip">
-       <h1>{{card.cardNum}}</h1>
+      <img class="cardChip" :src="card.vendor.cardChip">
+      <h1>{{card.cardNum}}</h1>
       <div class="cardNI">
-      <div class="cardName">Name <br>{{card.cardName}} </div>
-      <div class="cardInfo">Year/Month <br>{{card.cardYear}}/{{card.cardMonth}}</div>
+      <p class="cardName">Name <br>{{card.cardName}} </p>
+      <p class="cardInfo">Year/Month <br>{{card.cardYear}}/{{card.cardMonth}}</p>
       </div>
   </div>
   </template>
